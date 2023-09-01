@@ -1,0 +1,23 @@
+/* // X-Large devices (large desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) and (orientation: landscape){
+    html{
+        font-size: 90%;
+    }
+    body{
+        grid-template-rows: 7rem 1fr 3fr 15rem;
+    }
+}
+
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+@media only screen and (min-width: 1400px) and (orientation: landscape){
+    html{
+        font-size: 100%;
+    }
+}
+
+@media only screen and (min-width: 1900px) and (orientation: landscape){
+    html{
+        font-size: 120%;
+    }
+}

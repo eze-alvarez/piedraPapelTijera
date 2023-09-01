@@ -1,0 +1,399 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size:62.5%;
+}
+
+/* 
+ X-Small devices (portrait phones, less than 576px)
+No media query for `xs` since this is the default in Bootstrap */
+/* @media only screen and (min-device-width: 360px) and (orientation: portrait) 
+{ Your Styles...  */
+button{
+    border: none;
+}
+body{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 5rem 1fr 2fr 1fr 2fr 15rem;
+    background-color: rgb(189, 182, 172);
+    
+    grid-template-areas: 
+    "nav        nav         nav         nav         nav"
+    "playerName  playerName  playerName  playerName  playerName"
+    "manoIzq    manoIzq     showL       showL       showL"
+    "compu      compu       compu       compu       compu"
+    "showR      showR       showR       manoDer     manoDer"
+    "footer     footer      footer      footer      footer";
+}
+
+.sector-nav {
+    grid-area : nav;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sector-nav > .title{
+    color: white;
+}
+
+.sectionNamePlayer{
+    grid-area: playerName;
+    background-color: rgb(101, 169, 237);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 2rem;
+}
+
+.sectionHandPlayer{
+    grid-area: manoIzq ;
+    background-color: blue;
+}
+
+.manoIzqOculta {
+    position: relative;
+    transition-property:left;
+    transition-duration: 2s;
+    left: 0;
+  }
+
+  .sectionShowLeftHand{
+    grid-area: showL;
+  }
+  .manoIzqMostrar {
+    position: relative;
+    transition-property:left;
+    transition-duration: 1s;
+    left: 40vw;
+  }
+.sectorImagenPlayLeft > img
+, .sectorImagenPlayRight > img{
+    width: 100%;
+    height: auto;
+}
+
+.sectionCompuName{
+    grid-area: compu;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    padding-right: 2rem;
+    background-color: rgb(101, 169, 237);
+}
+.sectionHandCompu{
+    grid-area: manoDer;
+    background-color: blue;
+}
+.manoDerOculta {
+    position: relative;
+    transition-property: right;
+    transition-duration: 2s;
+    display: flex;
+    align-items: center;
+    right: 0;
+    top: 0;
+  }
+
+  .sectionShowRigthHand{
+    grid-area:showR ;
+    background-color: rgb(189, 182, 172);
+
+  }
+  .manoDerMostrar {
+    position: relative;
+    transition-property:right;
+    transition-duration: 1s;
+    right: 40vw;
+  }
+
+
+.puntaje
+, .puntaje-compu{
+    display: flex;
+}
+.punto{
+    width: 3rem;
+    height: 3rem;
+    background-color: white;
+    border: thin solid black;
+}
+
+.puntoGanado{
+    background-color: greenyellow;
+}
+.puntoPerdido{
+    background-color: red;
+}
+.puntoEmpate{
+    background-color: yellow;
+}
+
+.footer-btns{
+    grid-area: footer;
+    background-color: rgb(101, 169, 237);
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+}
+
+
+
+footer > article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 1rem;
+}
+footer > article >button{
+    width: 5rem;
+    background-color: transparent;
+    border: none;
+}
+footer > article >button >img{
+    width: 100%;
+    height: auto;
+}
+footer > article > h3 {
+    font-size: 1.5rem;
+}
+.telon-izq{
+    grid-column: 1/3;
+    grid-row: 3/4;
+    background-color: black;
+    position: relative;
+}
+.telon-der{
+    grid-column: 4/6;
+    grid-row: 5/6;
+    background-color: black;
+    position: relative;
+}
+.section-load{
+    grid-column: 1/6;
+    grid-row: 2/7;
+    background-color: rgb(189, 182, 172);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 0;
+    left: 0;
+    padding-top: 5rem;
+}
+.container-btn-rounds{
+    display: grid;
+    grid-template-columns: repeat(2, 10rem);
+    grid-template-rows: repeat(2, 10rem);
+    gap: 1.5rem;
+    margin-top: 5rem;
+}
+.btn-round{
+    background-color: transparent;
+    border-radius: 2rem;
+}
+.btn-round:hover{
+    box-shadow: 0 0 1rem 0.5rem aliceblue;
+    border-radius: 2rem;
+}
+.btn-round:focus{
+    box-shadow: 0 0 1rem 0.5rem aliceblue;
+    border-radius: 2rem;
+}
+.btn-round > header{
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(101, 169, 237);
+    border-radius: 2rem 2rem 0 0;
+}
+.btn-round > header > h2{
+    color: white;
+    font-size: 3rem;
+}
+.btn-round > footer{
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(26, 132, 238);
+    border-top: thin solid black    ;
+    border-radius: 0 0 2rem 2rem ;
+}
+.btn-round > footer > h3{
+    font-size: 1.6rem;
+}
+
+.namePlayer {
+    margin: 3rem 0 2rem;
+    display: flex;
+    align-items: end;
+  }
+.namePlayer > label {
+    font-size: 2rem;
+    color: white;
+}
+.namePlayerInput {
+    padding-left: 0.5rem;
+    margin-left: 0.5rem;
+    width: 10rem;
+    height: 2rem;
+    font-size: 1.2rem;
+}
+.playerName1
+, .compuName{
+    font-size: 1.8rem;
+    padding-bottom: 0.5rem;
+}
+.mensajeRoundIncompleto {
+    margin-top: 1rem;
+    font-size: 2rem;
+    color: white;
+    padding: 0.5rem 1rem;
+  }
+
+
+.btn-play{
+    width: 10rem;
+    height: 4rem;
+    border-radius: 2rem;
+    font-size: 2.5rem;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    padding-bottom: 0.5rem;
+}
+
+.ganador{
+    grid-column: 2/5;
+    grid-row: 3/6;
+  }
+
+.sectionGanador {
+    background-color: #a42389;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 2rem;
+    padding: 2rem;
+    color: white;
+    opacity: 0.9;
+    margin: 1rem;
+    border: medium solid white;
+  }
+
+
+  
+
+  .resultadoTitulo{
+    font-size: 1.9rem;
+  }
+  .resumen{
+    font-size: 1.5rem;
+  }
+  .winLoss {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  .btn-newGame{
+    border: none;
+    width: 100%;
+    background: transparent;
+  }
+  .btn-newGame > img {
+    width: 70%;
+    height: auto;
+  }
+  .btn-newGame > h3 {
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+  }
+
+  @media only screen and (min-device-width: 640px) and (orientation: landscape){
+    html{
+        font-size:40%;
+    }
+
+    
+    body{
+        height: 100vh;
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: 7rem 1fr 3fr 22rem;
+        background-color: rgb(189, 182, 172);
+        
+        grid-template-areas: 
+        "nav        nav         nav         nav         nav             nav     nav     nav"            
+        "playerName  playerName  playerName playerName  compu           compu   compu   compu"
+        "manoIzq    manoIzq     showL       showL       showR           showR   manoDer manoDer"
+        "footer     footer      footer      footer      footer          footer  footer  footer";
+    }
+
+    .sector-nav > .title{
+        font-size: 2.5rem;
+    }
+    .sectionNamePlayer {
+        padding-left: 4rem;
+    }
+    .sectionCompuName {
+        padding-right: 4rem;
+    }
+    .sectionHandPlayer {
+        padding-top: 1rem;
+      }
+    .sectionHandCompu {
+        padding-top: 5rem;
+      }
+    .manoIzqMostrar {
+        position: relative;
+        transition-property:left;
+        transition-duration: 1s;
+        left: 25vw;
+    }
+    .manoDerMostrar {
+        position: relative;
+        transition-property:right;
+        transition-duration: 1s;
+        right: 25vw;
+    }
+      
+    .telon-izq {
+        grid-column: 1/3;
+        grid-row: 3/4;
+        background-color: black;
+        position: relative;
+    }
+    .telon-der {
+        grid-column: 7/9;
+        grid-row: 3/4;
+        background-color: black;
+        position: relative;
+    }
+
+    footer > article > button {
+        width: 8rem;
+      }
+    
+    .section-load{
+        grid-column: 1/9;
+        grid-row: 2/5;
+        padding-top: 1rem;
+    }
+    .ganador{
+        grid-column: 4/6;
+        grid-row: 2/4;
+      }
+      .btn-newGame > img {
+        width: 35%;
+      }
+
+  }
+  

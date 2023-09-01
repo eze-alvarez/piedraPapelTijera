@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link 
+        rel="stylesheet" 
+        href="./style.css"
+    >
+    <link 
+        rel="stylesheet" 
+        href="./tablet.css" 
+        media="screen and (min-width:720px)"
+    >
+    <link 
+        rel="stylesheet" 
+        href="./desktop.css"
+        media="screen and (min-width:1200px)"
+        >
+</head>
+<body>
+    <header class="sector-nav">
+            <h2 class="title">Piedra Papel Tijera</h2>
+    </header>
+    <section class="sectionNamePlayer">
+        <h3 class="playerName1">sadsad</h3>
+        <div class="puntaje">
+           
+        </div>
+    </section>
+    <section class="sectionHandPlayer">
+        <div class="sectorImagenPlayLeft manoIzqOculta"></div>
+        
+    </section>
+
+    <section class="sectionShowLeftHand"></section>
+
+    <section class="sectionCompuName">
+        <h3 class="compuName">sfdsdf</h3>
+        <div class="puntaje-compu">
+           
+        </div>
+    </section>
+
+    <section class="sectionHandCompu">
+        <div class="sectorImagenPlayRight manoDerOculta"></div>
+
+    </section>
+
+    <section class="sectionShowRigthHand"></section>
+
+    <footer class="footer-btns">
+            <article>
+                <button id="piedra" class="piedra buttonsPlay">
+                    <img 
+                        src="./img/piedra-boton.png" alt="piedra-boton" 
+                    >
+                </button>
+                <h3>Piedra</h3>
+            </article>
+
+            <article>
+                <button id="papel" class="papel buttonsPlay">
+                    <img 
+                        src="/img/papel-boton.png" 
+                        alt="papel-boton"
+                    >
+                </button>
+                <h3>Papel</h3>
+            </article>
+
+            <article>
+                <button id="tijera" class="tijera buttonsPlay">
+                    <img 
+                        src="./img/tijera-boton.png" alt="tijera-boton"
+                    >
+                </button>
+                <h3>Tijera</h3>
+            </article>
+    </footer>
+    <section class="telon-izq"></section>
+    <section class="telon-der"></section>
+    <section class="section-load">
+        <div class="container-btn-rounds">
+            <button class="btn-round" id="1">
+                <header>
+                    <h2>1</h2>
+                </header>
+                <footer>
+                    <h3>round</h3>
+                </footer>
+            </button>
+            <button class="btn-round" id="3">
+                <header>
+                    <h2>3</h2>
+                </header>
+                <footer>
+                    <h3>round</h3>
+                </footer>
+            </button>
+            <button class="btn-round" id="5">
+                <header>
+                    <h2>5</h2>
+                </header>
+                <footer>
+                    <h3>round</h3>
+                </footer>
+            </button>
+            <button class="btn-round" id="10">
+                <header>
+                    <h2>10</h2>
+                </header>
+                <footer>
+                    <h3>round</h3>
+                </footer>
+            </button>
+        </div>
+
+        <div class="namePlayer">
+            <label>Ingresa tu nombre:</label>
+            <input class="namePlayerInput" type="text" placeholder="jugador 1" maxlength="10">
+        </div>
+
+        <button class="btn-play">play</button>
+
+        <h2 class="mensajeRoundIncompleto"></h2>
+    </section>
+    
+    <section class="ganador">
+        <!-- 
+       <h2 class="resultadoTitulo">RESULTADO</h2>
+
+        <p class="resumen"> ${nombreJugador} = ${ganadosUsuario} </br> </br> computadora = ${ganadosCompu}</p>`
+        
+        <h1 class="winLoss">PERDISTE !</h1>
+            
+        <button class="btn-newGame">
+            <img src="./img/refresh.png" alt="volver a jugar">
+            <h3>volver a jugar</h3>
+        </button>
+        -->
+       
+    </section>
+
+    <script src="./logic.js"></script>
+</body>
+</html>

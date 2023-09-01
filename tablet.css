@@ -1,0 +1,19 @@
+/* // Medium devices (tablets, 768px and up) */
+@media only screen and (min-width: 720px) and (orientation: portrait) {
+    html{
+        font-size: 100%;
+    }   
+    .sectionGanador { 
+        margin: 6rem 3rem;
+    }
+    .btn-newGame > img {
+        width: 50%;
+      }
+}
+
+@media only screen and (min-width: 1080px) and (orientation: landscape){
+    html{
+        font-size: 80%;
+    }
+
+}
